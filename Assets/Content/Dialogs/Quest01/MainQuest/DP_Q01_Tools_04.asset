@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9e1f36f0741bf4388b958a2b0d42ca, type: 3}
+  m_Name: DP_Q01_Tools_04
+  m_EditorClassIdentifier: 
+  _characterDefinition: {fileID: 11400000, guid: fe697646740e4724682fcc9a2ddf2490,
+    type: 2}
+  _headshotPosition: 1
+  _gameVariablesToSetOnPartStart:
+  - _gameVariableDefinition: {fileID: 11400000, guid: 450a01be9751e044d87796a0cc66bf7a,
+      type: 2}
+    _value: 2
+  _dialogText: The ground is dry and barren, but with an ancestral gardening technique,
+    we can help restore it!
+  _gameVariablesToSetOnPartEnd:
+  - _gameVariableDefinition: {fileID: 11400000, guid: 450a01be9751e044d87796a0cc66bf7a,
+      type: 2}
+    _value: 0
+  _defaultNextDialogPart: {fileID: 11400000, guid: e823333ee48fa374abb62d81a95116fb,
+    type: 2}
+  _conditionalNextDialogParts: []
+  references:
+    version: 2
+    RefIds: []

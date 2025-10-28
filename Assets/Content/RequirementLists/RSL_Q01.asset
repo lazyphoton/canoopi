@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0aed9f57fc053478a237c4f5583671, type: 3}
+  m_Name: RSL_Q01
+  m_EditorClassIdentifier: 
+  _steps:
+  - rid: 6517431083753013323
+  - rid: 6517431077489082441
+  - rid: 6517431077489082444
+  - rid: 6517431083753013248
+  - rid: 6517431083753013313
+  - rid: 6517431083753013321
+  - rid: 5299047300017160259
+  - rid: 2579179798408200254
+  - rid: 6517431083753013322
+  - rid: 6517431077489082442
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2579179798408200254
+      type: {class: RSCollectItem, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: 2579179798408200255
+        _collectItemConditions:
+        - _itemDefinition: {fileID: 11400000, guid: b2af5e15ee27a0b40afae55e4f9a6049,
+            type: 2}
+          _amount: 5
+    - rid: 2579179798408200255
+      type: {class: RSESetGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableChange:
+          _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+            type: 2}
+          _value: 120
+    - rid: 5299047300017160259
+      type: {class: RSWaitForGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: -2
+        _description: Talk <sprite=9> to Gogo
+        _gameVariableCondition:
+          _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+            type: 2}
+          _targetValue: 110
+    - rid: 6517431077489082441
+      type: {class: RSWaitForGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: -2
+        _description: Talk <sprite=9> to Gogo
+        _gameVariableCondition:
+          _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+            type: 2}
+          _targetValue: 10
+    - rid: 6517431077489082442
+      type: {class: RSWaitSeconds, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: 6517431077489082443
+        _duration: 0
+    - rid: 6517431077489082443
+      type: {class: RSEShowInfo, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _infoText: 'DEBUG: Completed the first quest of the first scenario!'
+    - rid: 6517431077489082444
+      type: {class: RSCollectItem, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: 6517431077489082445
+        _collectItemConditions:
+        - _itemDefinition: {fileID: 11400000, guid: 443a57afc9a87c845a47c32f1a69b1c7,
+            type: 2}
+          _amount: 1
+        - _itemDefinition: {fileID: 11400000, guid: 5210893c635f7f94abac03a2d01d4680,
+            type: 2}
+          _amount: 1
+        - _itemDefinition: {fileID: 11400000, guid: fd155c4de399dce4cafd5f2906ab0ce7,
+            type: 2}
+          _amount: 1
+    - rid: 6517431077489082445
+      type: {class: RSESetGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableChange:
+          _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+            type: 2}
+          _value: 20
+    - rid: 6517431083753013248
+      type: {class: RSWaitForGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: -2
+        _description: Bring the tools to Gogo
+        _gameVariableCondition:
+          _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+            type: 2}
+          _targetValue: 30
+    - rid: 6517431083753013313
+      type: {class: RSWaitForGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: -2
+        _description: Talk <sprite=9> to Gogo
+        _gameVariableCondition:
+          _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+            type: 2}
+          _targetValue: 60
+    - rid: 6517431083753013321
+      type: {class: RSWaitForGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: -2
+        _description: Talk <sprite=9> to Gogo
+        _gameVariableCondition:
+          _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+            type: 2}
+          _targetValue: 90
+    - rid: 6517431083753013322
+      type: {class: RSWaitForGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: -2
+        _description: Talk <sprite=9> to Gogo
+        _gameVariableCondition:
+          _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+            type: 2}
+          _targetValue: 140
+    - rid: 6517431083753013323
+      type: {class: RSWaitSeconds, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: 6517431083753013324
+        _duration: 0
+    - rid: 6517431083753013324
+      type: {class: RSEShowInfo, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _infoText: 'DEBUG: This is the flow for the first quest of the first scenario.
+          This is a WIP, many things are a first pass, and a lot is not yet implemented.'

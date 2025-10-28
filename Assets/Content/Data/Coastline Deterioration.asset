@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536d8e9fa0e05fb42b7abfb728093a29, type: 3}
+  m_Name: Coastline Deterioration
+  m_EditorClassIdentifier: 
+  buttonLabel: <sprite=5> Coastline Deterioration
+  title: <sprite=5> Coastline Deterioration
+  description: In places near the sea, waves and storms are washing away the land.
+    People lose their farms, homes, and fishing spots. Salt from the sea can also
+    spoil the soil, making it harder to grow crops close to the shore.
+  overlayMaterial: {fileID: 2100000, guid: 76919758b0cb2974fb24b9662499e0c8, type: 2}

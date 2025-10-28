@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/UtilityScenes/StartScene.unity
+    guid: 0a1e147aa30450b42b6125900ce92401
+  - enabled: 1
+    path: Assets/Scenes/UtilityScenes/CommonSystems.unity
+    guid: d1810270093b14346a2991a8b1a7c715
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/TestLevel/TestLevelScene.unity
+    guid: 95375a69ad4730d4a82758d8ec1a20e5
+  - enabled: 0
+    path: Assets/Scenes/PlayScenes/BirdMinigame/BirdGameTest.unity
+    guid: 44eee031952bb4042b48078736be0ca9
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/SeedsMinigame/SortingSeedsMiniGame.unity
+    guid: b7abe9cc9a48dc14ea57b1cffb0658a5
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/BirdMinigame/BirdMinigameScene2.unity
+    guid: 193e938355be9994d85e52ccd1c1c978
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/00_SchoolHub/00_SchoolHubLevel.unity
+    guid: a1b46dd967c945a438fb508d505611b6
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/01_Bunds/01_BundsLevel.unity
+    guid: 95061c1ccb4c9ee4ab23234f285e4f52
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/MG_BundBranches/MG_BundBranches.unity
+    guid: ee3319c8d596b534a91ac0bdfdd35b9d
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/MG_BundDigging/MG_BundDigging.unity
+    guid: ce6c4d30fe6784b42ae7f4b261ab0996
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/MG_BundLocation/MG_BundLocation.unity
+    guid: 528a93399bb55d34b8d510359bbfa3b5
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/MG_SeedPlanting/MG_SeedPlanting.unity
+    guid: e2e1a7b61ad30234b9a6a11acea89911
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/MG_SeedSorting/MG_SeedSorting.unity
+    guid: ae91fde8b6e079447b6af7b6efcf75a0
+  - enabled: 1
+    path: Assets/Scenes/PlayScenes/MG_ChaseBirds/MG_ChaseBirds.unity
+    guid: fff55b75cf3b4904c941a4d7fcdc40e5
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

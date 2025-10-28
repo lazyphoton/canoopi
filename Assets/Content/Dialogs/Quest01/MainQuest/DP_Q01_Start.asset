@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9e1f36f0741bf4388b958a2b0d42ca, type: 3}
+  m_Name: DP_Q01_Start
+  m_EditorClassIdentifier: 
+  _characterDefinition: {fileID: 0}
+  _headshotPosition: 0
+  _gameVariablesToSetOnPartStart:
+  - _gameVariableDefinition: {fileID: 11400000, guid: 5c66048dcafa7ea4a948cb0aebad929e,
+      type: 2}
+    _value: 
+  - _gameVariableDefinition: {fileID: 11400000, guid: 450a01be9751e044d87796a0cc66bf7a,
+      type: 2}
+    _value: 0
+  _dialogText: 
+  _gameVariablesToSetOnPartEnd: []
+  _defaultNextDialogPart: {fileID: 11400000, guid: e4a028bf7f6f9714cb16530b420c5368,
+    type: 2}
+  _conditionalNextDialogParts:
+  - _gameCondition:
+      rid: 6517431077489082368
+    _nextDialogPart: {fileID: 11400000, guid: 425461e6cab6cfb4e8fae122c42d9541, type: 2}
+  - _gameCondition:
+      rid: 6517431077489082369
+    _nextDialogPart: {fileID: 11400000, guid: e1e6f3f54bfd0964585a75334152fa99, type: 2}
+  - _gameCondition:
+      rid: 5299047300017160252
+    _nextDialogPart: {fileID: 11400000, guid: 9b61579bd6ec4524896d3529204a8351, type: 2}
+  - _gameCondition:
+      rid: 5299047300017160253
+    _nextDialogPart: {fileID: 11400000, guid: 4aa0dca804d300342b4188924f9c62b6, type: 2}
+  - _gameCondition:
+      rid: 5299047300017160254
+    _nextDialogPart: {fileID: 11400000, guid: f66f8ada6cdf0884986b4cbf91600974, type: 2}
+  - _gameCondition:
+      rid: 5299047300017160255
+    _nextDialogPart: {fileID: 11400000, guid: 99dbc34ed00a1b24f9f64684ab2a0a7a, type: 2}
+  - _gameCondition:
+      rid: 5299047300017160256
+    _nextDialogPart: {fileID: 11400000, guid: 33d60371e690322469ea4961817f2513, type: 2}
+  - _gameCondition:
+      rid: 5299047300017160257
+    _nextDialogPart: {fileID: 11400000, guid: 49e304eaedff6d04a916b65dcbbe67a1, type: 2}
+  - _gameCondition:
+      rid: 5299047300017160258
+    _nextDialogPart: {fileID: 11400000, guid: a3bb44037bc5d07438d178e4a6dd8e46, type: 2}
+  references:
+    version: 2
+    RefIds:
+    - rid: 5299047300017160252
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 20
+    - rid: 5299047300017160253
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 50
+    - rid: 5299047300017160254
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 80
+    - rid: 5299047300017160255
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 100
+    - rid: 5299047300017160256
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 110
+    - rid: 5299047300017160257
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 130
+    - rid: 5299047300017160258
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 140
+    - rid: 6517431077489082368
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 0
+    - rid: 6517431077489082369
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 5c0336c0dc488d94793c644551eda9c4,
+          type: 2}
+        _targetValue: 10

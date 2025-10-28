@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0aed9f57fc053478a237c4f5583671, type: 3}
+  m_Name: TestRequirementStepList
+  m_EditorClassIdentifier: 
+  _steps:
+  - rid: 5972571888647667778
+  - rid: 8298914080164413504
+  - rid: 8298914080164413505
+  - rid: 8054121257460039741
+  - rid: 8298914080164413507
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 5972571888647667778
+      type: {class: RSWaitSeconds, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: 5972571888647667779
+        _duration: 0.2
+    - rid: 5972571888647667779
+      type: {class: RSEShowInfo, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _infoText: This is a little test sequence with test requirements to demonstrate
+          how a quest could work and check various systems' functionality.
+    - rid: 8054121257460039741
+      type: {class: RSCollectItem, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: 8054121257460039742
+        _collectItemConditions:
+        - _itemDefinition: {fileID: 11400000, guid: 70ea49040734ced4eb8d7b2114c3b6fb,
+            type: 2}
+          _amount: 2
+        - _itemDefinition: {fileID: 11400000, guid: f7e685bedf165e840a5bf957d2b69b7d,
+            type: 2}
+          _amount: 6
+    - rid: 8054121257460039742
+      type: {class: RSESetGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableChange:
+          _gameVariableDefinition: {fileID: 11400000, guid: 801fa4d763e029f428519fba1b6fc0f6,
+            type: 2}
+          _value: true
+    - rid: 8298914080164413504
+      type: {class: RSWaitForGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: -2
+        _description: Wait for TestInt=0 (should be immediate)
+        _gameVariableCondition:
+          _gameVariableDefinition: {fileID: 11400000, guid: 096fef6259af18a458b0f28309ead85b,
+            type: 2}
+          _targetValue: 0
+    - rid: 8298914080164413505
+      type: {class: RSWaitSeconds, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: 8298914080164413506
+        _duration: 1
+    - rid: 8298914080164413506
+      type: {class: RSESetGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableChange:
+          _gameVariableDefinition: {fileID: 11400000, guid: 096fef6259af18a458b0f28309ead85b,
+            type: 2}
+          _value: 8
+    - rid: 8298914080164413507
+      type: {class: RSWaitForGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _onCompleteEvent:
+          rid: 8298914080164413508
+        _description: Wait for TestInt=5
+        _gameVariableCondition:
+          _gameVariableDefinition: {fileID: 11400000, guid: 096fef6259af18a458b0f28309ead85b,
+            type: 2}
+          _targetValue: 5
+    - rid: 8298914080164413508
+      type: {class: RSEShowInfo, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _infoText: Completed, this means that TestInt was 5.

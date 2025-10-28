@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9e1f36f0741bf4388b958a2b0d42ca, type: 3}
+  m_Name: DP_T1_Start
+  m_EditorClassIdentifier: 
+  _characterDefinition: {fileID: 11400000, guid: ea85fc1698f4fa04595c3afa69be94ba,
+    type: 2}
+  _headshotPosition: 0
+  _dialogText: 
+  _conditionalNextDialogParts:
+  - _gameCondition:
+      rid: 8054121257460039740
+    _nextDialogPart: {fileID: 11400000, guid: 34f98c0ad25bf6d4ca3a531488be38fd, type: 2}
+  _defaultNextDialogPart: {fileID: 11400000, guid: 98f86415e194c7747be6328c5a405fc9,
+    type: 2}
+  _gameVariablesToSet: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8054121257460039740
+      type: {class: GCGameVariable, ns: c4g, asm: Assembly-CSharp}
+      data:
+        _gameVariableDefinition: {fileID: 11400000, guid: 801fa4d763e029f428519fba1b6fc0f6,
+          type: 2}
+        _targetValue: true

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536d8e9fa0e05fb42b7abfb728093a29, type: 3}
+  m_Name: Fires
+  m_EditorClassIdentifier: 
+  buttonLabel: <sprite=2> Fires
+  title: <sprite=2> Fires
+  description: "Fires can burn trees, houses, and fields \u2014 especially when it\u2019s
+    very dry. Sometimes they start from cooking fires or strong sun on dry grass.
+    Fires destroy homes for animals and people, and the smoke makes breathing hard."
+  overlayMaterial: {fileID: 2100000, guid: 97fb9d3271c2e824abf2a1db80962792, type: 2}
