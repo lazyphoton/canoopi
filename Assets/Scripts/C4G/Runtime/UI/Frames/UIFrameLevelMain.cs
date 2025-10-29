@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 namespace c4g
@@ -34,6 +32,9 @@ namespace c4g
         [SerializeField]
         private TextMeshProUGUI _testQuestText;
 
+        [SerializeField]
+        private GameObject _inventoryItemParentPanel;
+
         [Header("Data")]
         [SerializeField]
         private GameSceneDefinition _schoolHubScene;
@@ -46,6 +47,9 @@ namespace c4g
 
         [SerializeField]
         private UIFrameDefinition _inventoryFrameDefinition;
+
+        [SerializeField]
+        private GameObject _inventoryItemIconPrefab;
 
         private QuestManager _questManager;
 
@@ -63,6 +67,12 @@ namespace c4g
             UiManager.DialogFinished += OnDialogFinished;
 
             _playerInformationManager = World.GetService<PlayerInformationManager>();
+            _playerInformationManager.InventoryUpdated += OnInventoryUpdated;
+
+            if(_playerInformationManager.CurrentPlayerInventory != null)
+            {
+                OnInventoryUpdated(_playerInformationManager.CurrentPlayerInventory);
+            }
 
             _interactionManager = World.GetService<InteractionManager>();
             _interactionManager.PointerClickRaycastHit += OnPointerRaycastHit;
@@ -128,11 +138,15 @@ namespace c4g
 
         private void OnDestroy()
         {
+            Log.Debug("Destroying UI Frame Level Main");
+
             if (_questManager != null) 
             {
                 _questManager.QuestStepStarted -= OnStepStarted;
                 _questManager.QuestComplete -= OnQuestComplete;
             }
+
+            _playerInformationManager.InventoryUpdated -= OnInventoryUpdated;
         }
 
         private void OnStepStarted(IRequirementStep step)
@@ -203,6 +217,44 @@ namespace c4g
             {
                 player.Navigator.StopNavigation();
                 UiManager.PushUIInteractionChoice(currentInteractableMethods, hitInfo.transform.position);
+            }
+        }
+
+        private void OnInventoryUpdated(Inventory inventory)
+        {
+            // huh????
+            // maybe issues from chaining events to other events
+            if(_inventoryItemParentPanel == null)
+            {
+                Log.Warning("Attempting to update inventory with null parent panel.");
+                return;
+            }
+
+            foreach(Transform child in _inventoryItemParentPanel.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            foreach(var item in inventory.AllItems)
+            {
+                if(item.Amount == 0)
+                {
+                    continue;
+                }
+
+                var itemObj = Instantiate(_inventoryItemIconPrefab, _inventoryItemParentPanel.transform);
+
+                itemObj.transform.Find("IconImage").GetComponent<Image>().sprite = item.Definition.UiIcon;
+                var countingCircleTransform = itemObj.transform.Find("CounterCircle");
+
+                if(item.Amount == 1)
+                {
+                    countingCircleTransform.gameObject.SetActive(false);
+                }
+                else
+                {
+                    countingCircleTransform.GetComponentInChildren<TextMeshProUGUI>().text = item.Amount.ToString();
+                }
             }
         }
     }

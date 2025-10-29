@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: Branch
   _iconIndex: 15
+  _uiIcon: {fileID: 21300000, guid: 8cd3f3c40af4125469354e21eb4ed50e, type: 3}

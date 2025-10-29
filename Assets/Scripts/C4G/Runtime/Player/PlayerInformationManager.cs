@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,32 @@ namespace c4g
 {
     public class PlayerInformationManager
     {
+        public event Action<Inventory> InventoryUpdated;
+
         public Player CurrentPlayer { get; set; }
 
-        public Inventory CurrentPlayerInventory { get; set; }
+        private Inventory _currentPlayerInventory;
+        public Inventory CurrentPlayerInventory 
+        { 
+            get => _currentPlayerInventory;
+            set
+            {
+                if(_currentPlayerInventory != null)
+                {
+                    _currentPlayerInventory.InventoryUpdated -= OnCurrentInventoryUpdated;
+                }
+
+                _currentPlayerInventory = value;
+                _currentPlayerInventory.InventoryUpdated += OnCurrentInventoryUpdated;
+
+                OnCurrentInventoryUpdated(_currentPlayerInventory);
+            }
+        }
+
+        private void OnCurrentInventoryUpdated(Inventory inventory)
+        {
+            InventoryUpdated?.Invoke(inventory);
+        }
 
         public int CurrentPlayerVisualIndex = -1;
         public bool HasPlayerChosenVisual => CurrentPlayerVisualIndex >= 0;

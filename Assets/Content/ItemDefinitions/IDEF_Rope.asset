@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemName: Rope
   _iconIndex: 14
+  _uiIcon: {fileID: 21300000, guid: cdce47e451738e842aef4143f0b9e3f3, type: 3}

@@ -13,8 +13,13 @@ namespace c4g
         [SerializeField]
         private int _iconIndex = -1;
 
+        [SerializeField]
+        private Sprite _uiIcon;
+
         public string ItemName => _itemName;
 
         public int IconIndex => _iconIndex;
+
+        public Sprite UiIcon => _uiIcon;
     }
 }
